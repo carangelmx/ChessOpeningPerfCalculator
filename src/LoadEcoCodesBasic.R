@@ -1,9 +1,5 @@
-library(xlsx)
-
-
-ECO <- read.xlsx("./data/raw/ECO CODES.xlsx", 1)
-
-#Load ECO CODES FULL
+ECO <- read.csv("./data/raw/ECOCodesBasic.csv", sep=",", 1)
+#Load ECOCodesFull.csv
 #source: https://raw.githubusercontent.com/ornicar/scalachess/master/src/main/scala/opening/EcopeningDB.scala
 
-#ECO <- read.xlsx("./data/raw/ECO CODES FULL.xlsx", 1)
+#ECO <- read.csv("./data/raw/ECOCodesFull.csv", sep=",", 1)
