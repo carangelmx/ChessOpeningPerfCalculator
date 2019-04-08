@@ -2,6 +2,8 @@
 Calculate metrics about chess opening performance for an user based in a PGN file.\
 How is my performance in openings? This program will answer this question!
 
+![alt text](https://github.com/carangelmx/ChessOpeningPerfCalculator/blob/master/img/ChessOpeningPerfCalculator.PNG)
+
 ## SUMMARY
 
 Get a file with PGNs (input) and calculate metrics about opening performance with white and black for the selected user (output). The analysis is carried out on the most frequent ECO codes used by the user.
