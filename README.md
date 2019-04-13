@@ -8,9 +8,11 @@ How is my performance in openings? This program will answer this question!
 
 Get a file with PGNs (input) and calculate metrics about opening performance with white and black for the selected user (output). The analysis is carried out on the most frequent ECO codes used by the user.\
 
-Background: https://carangelmx.blogspot.com/2019/04/plataforma-aprendizaje-ajedrez.html\
+Background\
 
-(automatic translation in: https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=https%3A%2F%2Fcarangelmx.blogspot.com%2F2019%2F04%2Fplataforma-aprendizaje-ajedrez.html)
+(spanish): https://carangelmx.blogspot.com/2019/04/plataforma-aprendizaje-ajedrez.html\
+
+(english): https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=https%3A%2F%2Fcarangelmx.blogspot.com%2F2019%2F04%2Fplataforma-aprendizaje-ajedrez.html)\
 
 ## PREREQUISITES:
 - R and Rstudio
