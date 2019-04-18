@@ -12,14 +12,6 @@ games <- games %>% mutate(BlackElo = as.numeric(BlackElo), WhiteElo = as.numeric
 finalres <- function(gameresult){
   ifelse(gameresult == "1-0", result <- 1,
          ifelse(gameresult == "0-1", result <- 0,
-                ifelse(gameresult == "1/2-1/2",result <- 0.5, result <- 3)))
-  result
-}
-
-
-finalres <- function(gameresult){
-  ifelse(gameresult == "1-0", result <- 1,
-         ifelse(gameresult == "0-1", result <- 0,
                 ifelse(gameresult == "1/2-1/2", result <- 0.5, result <- 3)))
   result
 }
@@ -81,7 +73,7 @@ cat("ECO Ratio Black:", BlackECOAnalized, "/", BlackECOQty, "=", BlackECOAnalize
 
 #Perform full analysis on the Black ECO data base Filteres with ECO>ngames. The avg ELO difference is taken into accout 
 PerformanceByECOBlack <- games %>% filter(Black == user) %>% 
-  select(BlackElo, ECO, Result, WhiteElo, WhiteRatingDiff, finalresult) %>%
+  select(BlackElo, ECO, Result, WhiteElo, finalresult) %>%
   group_by(ECO) %>%
   mutate(qty = n()) %>%
   #remove ECO with just ngames games
@@ -148,7 +140,7 @@ WhiteGamesAnalized <- games %>% filter(White == user) %>%
 
 #Perform full analysis on the White ECO data base Filteres with ECO>ngames. The avg ELO difference is taken into accout 
 PerformanceByECOWhite <- games %>% filter(White == user) %>% 
-  select(BlackElo, ECO, Result, WhiteElo, WhiteRatingDiff, finalresult) %>%
+  select(BlackElo, ECO, Result, WhiteElo, finalresult) %>%
   group_by(ECO) %>%
   mutate(qty = n()) %>%
   #remove ECO with just ngames games
