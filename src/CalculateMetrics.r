@@ -1,8 +1,9 @@
 #provides a simpler format for batch_red
 games <- tbl_df(batch_read)
 
+#strangely, the former sentence stopped working for the new ReadPGN function
 #removes registers with non numeric ELOs
-games <- games %>% filter(!is.numeric(BlackElo) | !is.numeric(WhiteElo))
+games <- games %>% filter(!is.na(BlackElo) & !is.na(WhiteElo))
 
 #turns ELO to numeric
 games <- games %>% mutate(BlackElo = as.numeric(BlackElo), WhiteElo = as.numeric(WhiteElo))
